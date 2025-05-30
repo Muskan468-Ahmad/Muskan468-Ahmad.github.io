@@ -1,220 +1,108 @@
-/* Base Styles & Variables */
+/* ===== CRITICAL VISIBILITY FIXES ===== */
+/* Text Colors */
 :root {
-    --primary: #b388ff; /* Softer vibrant purple */
-    --secondary: #7c4dff; /* Deep purple */
-    --accent: #ff80ab; /* Pink accent */
-    --text: #f5f5f7; /* Brighter text */
-    --text-secondary: #d1d1d6;
-    --bg: #0a0a12; /* Slightly lighter dark background */
-    --card-bg: #1a1a24;
-    --nav-bg: rgba(26, 26, 36, 0.98);
-    --footer-bg: #0a0a0f;
-    --section-bg: linear-gradient(135deg, #0f0a1a 0%, #1a0a2e 100%);
-    --glow: 0 0 15px rgba(179, 136, 255, 0.5);
+    --text: #ffffff; /* Pure white for maximum contrast */
+    --text-secondary: #cccccc; /* Light gray for secondary text */
 }
 
-/* Light mode overrides */
-.light-mode {
-    --primary: #7c4dff;
-    --secondary: #5e35b1;
-    --accent: #ff4081;
-    --text: #333344;
-    --text-secondary: #555566;
-    --bg: #f8f9ff;
-    --card-bg: #ffffff;
-    --nav-bg: rgba(255, 255, 255, 0.98);
-    --footer-bg: #2c3e50;
-    --section-bg: linear-gradient(135deg, #f5f7ff 0%, #e8eaf6 100%);
-    --glow: 0 0 10px rgba(124, 77, 255, 0.2);
-}
-
-/* Typography */
-body {
-    color: var(--text);
-    background-color: var(--bg);
-    line-height: 1.7;
-}
-
-h1, h2, h3, h4 {
-    color: var(--text);
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-h2 {
-    font-size: 2.8rem;
-    margin-bottom: 3rem;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-}
-
-/* Dark Sections */
 .dark-section {
-    background: var(--section-bg);
-    color: var(--text);
-    border-top: 1px solid rgba(179, 136, 255, 0.15);
-    border-bottom: 1px solid rgba(179, 136, 255, 0.15);
-}
-
-.dark-section p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Cards & Containers */
-.skill-category,
-.project-card,
-.contact-info,
-.contact-form {
-    background: var(--card-bg);
-    border: 1px solid rgba(179, 136, 255, 0.2);
-    border-radius: 12px;
-    box-shadow: var(--glow);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    color: var(--text) !important;
 }
 
 /* Project Cards */
 .project-card {
-    overflow: hidden;
+    background: #1a1a24 !important;
+    border: 1px solid #3d3d4d !important;
 }
 
 .project-card h3 {
-    color: var(--text);
-    font-size: 1.5rem;
-    margin-bottom: 0.8rem;
+    color: #ffffff !important;
+    font-size: 1.3rem !important;
 }
 
 .project-card p {
-    color: var(--text-secondary);
-    font-size: 1rem;
+    color: #d1d1e0 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
 }
 
 .project-tech span {
-    background: rgba(179, 136, 255, 0.1);
-    color: var(--primary);
-    border: 1px solid rgba(179, 136, 255, 0.3);
+    background: rgba(179, 136, 255, 0.2) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 0.4rem 0.9rem !important;
 }
 
-/* Skills Section */
-.skill-category h3 {
-    color: var(--text);
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    padding-bottom: 0.5rem;
+.project-link {
+    color: #b388ff !important;
+    font-weight: 600 !important;
 }
 
-.skill-category h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+/* Contact Form */
+.contact-info p,
+.contact-info i {
+    color: #ffffff !important;
 }
 
-.skill-bar {
-    background: rgba(255, 255, 255, 0.08);
-    height: 10px;
-    border-radius: 5px;
+.contact-form input,
+.contact-form textarea {
+    background: #252538 !important;
+    color: #ffffff !important;
+    border: 1px solid #4d4d6d !important;
 }
 
-.skill-progress {
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    border-radius: 5px;
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #a0a0b0 !important;
+}
+
+/* Footer */
+footer p {
+    color: #ffffff !important;
+}
+
+/* ===== ENHANCED CONTRAST VERSION ===== */
+/* Replace these variables in your :root */
+:root {
+    --primary: #b388ff;
+    --secondary: #7c4dff;
+    --accent: #ff80ab;
+    --text: #ffffff; /* Changed to pure white */
+    --text-secondary: #d1d1e0; /* Light gray */
+    --bg: #0a0a12;
+    --card-bg: #1a1a24;
+    --nav-bg: rgba(26, 26, 36, 0.98);
+    --footer-bg: #0a0a0f;
+    --section-bg: #0f0a1a;
+}
+
+/* Project Filters */
+.project-filters {
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    background: #252538 !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 0.6rem 1.8rem !important;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    box-shadow: 0 0 10px rgba(179, 136, 255, 0.5) !important;
 }
 
 /* Contact Section */
-.contact-intro {
-    color: var(--text-secondary);
-    font-size: 1.2rem;
-    line-height: 1.8;
+.contact-container {
+    background: #1a1a24 !important;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.contact-info p {
-    color: var(--text);
-    font-size: 1.1rem;
-}
-
-.contact-info i {
-    color: var(--primary);
-    font-size: 1.2rem;
-}
-
-/* Form Elements */
-.form-group input,
-.form-group textarea {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text);
-    border: 1px solid rgba(179, 136, 255, 0.3);
-    font-size: 1rem;
-    transition: all 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(179, 136, 255, 0.2);
-}
-
-/* Buttons */
-.cta-button {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-    border: none;
-}
-
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(179, 136, 255, 0.3);
-}
-
-/* Navigation */
-nav a {
-    color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-nav a:hover {
-    color: var(--text);
-}
-
-nav a::after {
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-}
-
-/* Hero Section (unchanged but with better text contrast) */
-.hero h1 {
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.subtitle {
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Dark Mode Toggle */
-#dark-mode-toggle {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    box-shadow: var(--glow);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    h2 {
-        font-size: 2.2rem;
-    }
-    
-    .dark-section p {
-        font-size: 1rem;
-    }
+.contact-info h3,
+.contact-form h3 {
+    color: #b388ff !important;
+    margin-bottom: 1.5rem;
 }
