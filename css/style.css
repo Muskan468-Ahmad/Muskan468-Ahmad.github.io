@@ -21,6 +21,45 @@
     --footer-bg: #121212;
 }
 
+/* Dark Sections */
+.dark-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e1e1e1;
+}
+
+.dark-section h2,
+.dark-section h3 {
+    color: #bb86fc;
+}
+
+.dark-section .contact-info,
+.dark-section .contact-form,
+.dark-section .skill-category,
+.dark-section .project-card {
+    background: #1e1e2e;
+    border: 1px solid #333;
+}
+
+.dark-section .form-group input,
+.dark-section .form-group textarea {
+    background: #2d2d42;
+    color: #e1e1e1;
+    border-color: #444;
+}
+
+.dark-section .project-tech span {
+    background: rgba(187, 134, 252, 0.1);
+}
+
+/* Contact Intro */
+.contact-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
 * {
     margin: 0;
     padding: 0;
