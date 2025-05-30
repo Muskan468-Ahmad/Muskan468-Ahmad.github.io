@@ -1,108 +1,152 @@
-/* ===== CRITICAL VISIBILITY FIXES ===== */
-/* Text Colors */
+/* Base Styles & Variables */
 :root {
-    --text: #ffffff; /* Pure white for maximum contrast */
-    --text-secondary: #cccccc; /* Light gray for secondary text */
+    --primary: #9c4dff; /* Vibrant purple */
+    --secondary: #6a3093; /* Deep purple */
+    --accent: #ff79c6; /* Pink accent */
+    --text: #e2e2e2;
+    --bg: #121212; /* Dark background */
+    --card-bg: #1e1e1e;
+    --nav-bg: rgba(30, 30, 30, 0.95);
+    --footer-bg: #0d0d0d;
+    --section-bg: linear-gradient(135deg, #1a0a2e 0%, #0f0a1a 100%);
 }
 
+/* Light mode overrides (optional) */
+.light-mode {
+    --primary: #6c63ff;
+    --secondary: #4a4e69;
+    --accent: #ff6584;
+    --text: #333;
+    --bg: #f8f9fa;
+    --card-bg: #fff;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: #2c3e50;
+    --section-bg: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+}
+
+/* Dark Sections */
 .dark-section {
-    color: var(--text) !important;
+    background: var(--section-bg);
+    color: var(--text);
+    border-top: 1px solid rgba(156, 77, 255, 0.1);
+    border-bottom: 1px solid rgba(156, 77, 255, 0.1);
+}
+
+.dark-section h2,
+.dark-section h3 {
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(156, 77, 255, 0.3);
+}
+
+.dark-section .contact-info,
+.dark-section .contact-form,
+.dark-section .skill-category,
+.dark-section .project-card {
+    background: rgba(30, 30, 46, 0.7);
+    border: 1px solid rgba(156, 77, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.dark-section .form-group input,
+.dark-section .form-group textarea {
+    background: rgba(40, 40, 60, 0.7);
+    color: var(--text);
+    border: 1px solid rgba(156, 77, 255, 0.3);
+}
+
+.dark-section .project-tech span {
+    background: rgba(156, 77, 255, 0.15);
+}
+
+/* Hero Section (unchanged background) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/bg-1.PNG') !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* Navigation */
+nav {
+    background: var(--nav-bg);
+    border-bottom: 1px solid rgba(156, 77, 255, 0.2);
+}
+
+nav a {
+    color: var(--text);
 }
 
 /* Project Cards */
 .project-card {
-    background: #1a1a24 !important;
-    border: 1px solid #3d3d4d !important;
-}
-
-.project-card h3 {
-    color: #ffffff !important;
-    font-size: 1.3rem !important;
-}
-
-.project-card p {
-    color: #d1d1e0 !important;
-    font-size: 1.05rem !important;
-    line-height: 1.6 !important;
-}
-
-.project-tech span {
-    background: rgba(179, 136, 255, 0.2) !important;
-    color: #ffffff !important;
-    border: none !important;
-    padding: 0.4rem 0.9rem !important;
-}
-
-.project-link {
-    color: #b388ff !important;
-    font-weight: 600 !important;
-}
-
-/* Contact Form */
-.contact-info p,
-.contact-info i {
-    color: #ffffff !important;
-}
-
-.contact-form input,
-.contact-form textarea {
-    background: #252538 !important;
-    color: #ffffff !important;
-    border: 1px solid #4d4d6d !important;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #a0a0b0 !important;
-}
-
-/* Footer */
-footer p {
-    color: #ffffff !important;
-}
-
-/* ===== ENHANCED CONTRAST VERSION ===== */
-/* Replace these variables in your :root */
-:root {
-    --primary: #b388ff;
-    --secondary: #7c4dff;
-    --accent: #ff80ab;
-    --text: #ffffff; /* Changed to pure white */
-    --text-secondary: #d1d1e0; /* Light gray */
-    --bg: #0a0a12;
-    --card-bg: #1a1a24;
-    --nav-bg: rgba(26, 26, 36, 0.98);
-    --footer-bg: #0a0a0f;
-    --section-bg: #0f0a1a;
-}
-
-/* Project Filters */
-.project-filters {
-    margin-bottom: 2.5rem;
-}
-
-.filter-btn {
-    background: #252538 !important;
-    color: #ffffff !important;
-    border: none !important;
-    padding: 0.6rem 1.8rem !important;
-}
-
-.filter-btn.active {
-    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
-    box-shadow: 0 0 10px rgba(179, 136, 255, 0.5) !important;
-}
-
-/* Contact Section */
-.contact-container {
-    background: #1a1a24 !important;
-    border-radius: 12px;
-    padding: 2rem;
+    transition: all 0.3s ease, transform 0.3s ease;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.contact-info h3,
-.contact-form h3 {
-    color: #b388ff !important;
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(156, 77, 255, 0.2);
+    border-color: var(--primary);
+}
+
+/* Skills Bars */
+.skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-progress {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    box-shadow: 0 0 10px rgba(156, 77, 255, 0.5);
+}
+
+/* Contact Section */
+.contact-intro {
+    color: #bbb;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.cta-button {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border: none;
+}
+
+.hire-me-button {
+    background: linear-gradient(135deg, var(--accent), #ff4d8d);
+}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: 0 0 15px rgba(156, 77, 255, 0.5);
+}
+
+/* Footer */
+footer {
+    background: var(--footer-bg);
+    border-top: 1px solid rgba(156, 77, 255, 0.2);
+}
+
+/* Add these new styles for better contrast */
+.project-card h3 {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.project-card p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.skill-category h3 {
+    color: var(--accent);
     margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.skill-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
 }
