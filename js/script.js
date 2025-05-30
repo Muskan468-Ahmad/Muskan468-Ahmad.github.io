@@ -1,6 +1,3 @@
-// Only change needed is to remove the achievements observer since we removed that section
-// The rest of your JavaScript remains exactly the same
-
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
@@ -138,8 +135,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     // Set current year in footer
-    document.querySelector('footer p').innerHTML = 
-        `&copy; ${new Date().getFullYear()} Muskan Ahmad. All rights reserved.`;
+    document.getElementById('current-year').textContent = new Date().getFullYear();
     
     // Set all filter buttons to inactive except "All"
     document.querySelectorAll('.filter-btn').forEach(btn => {
