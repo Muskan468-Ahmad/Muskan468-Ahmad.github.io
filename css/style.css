@@ -205,35 +205,21 @@ nav a:hover::after {
     box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
 }
 
+.hire-me-button {
+    background: var(--accent);
+    margin-left: 1rem;
+}
+
+.hire-me-button:hover {
+    background: var(--secondary);
+}
+
 /* About Section */
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
     align-items: center;
-}
-
-.education {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-item {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
-}
-
-.timeline-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.timeline-item h4 {
-    color: var(--primary);
 }
 
 /* Skills Section */
@@ -373,52 +359,6 @@ nav a:hover::after {
 
 .project-link:hover {
     color: var(--secondary);
-}
-
-/* Achievements Section */
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 50px;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background: var(--primary);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -40px;
-    top: 24px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--primary);
-    border: 3px solid var(--bg);
-    z-index: 1;
-}
-
-.timeline-date {
-    color: var(--primary);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
 }
 
 /* Contact Section */
@@ -563,6 +503,13 @@ footer {
     nav li {
         margin: 0 0.5rem;
     }
+
+    .cta-button, .hire-me-button {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -581,5 +528,14 @@ footer {
 
     .section h2 {
         font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.3rem 0;
     }
 }
