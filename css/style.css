@@ -1,152 +1,220 @@
 /* Base Styles & Variables */
 :root {
-    --primary: #9c4dff; /* Vibrant purple */
-    --secondary: #6a3093; /* Deep purple */
-    --accent: #ff79c6; /* Pink accent */
-    --text: #e2e2e2;
-    --bg: #121212; /* Dark background */
-    --card-bg: #1e1e1e;
-    --nav-bg: rgba(30, 30, 30, 0.95);
-    --footer-bg: #0d0d0d;
-    --section-bg: linear-gradient(135deg, #1a0a2e 0%, #0f0a1a 100%);
+    --primary: #b388ff; /* Softer vibrant purple */
+    --secondary: #7c4dff; /* Deep purple */
+    --accent: #ff80ab; /* Pink accent */
+    --text: #f5f5f7; /* Brighter text */
+    --text-secondary: #d1d1d6;
+    --bg: #0a0a12; /* Slightly lighter dark background */
+    --card-bg: #1a1a24;
+    --nav-bg: rgba(26, 26, 36, 0.98);
+    --footer-bg: #0a0a0f;
+    --section-bg: linear-gradient(135deg, #0f0a1a 0%, #1a0a2e 100%);
+    --glow: 0 0 15px rgba(179, 136, 255, 0.5);
 }
 
-/* Light mode overrides (optional) */
+/* Light mode overrides */
 .light-mode {
-    --primary: #6c63ff;
-    --secondary: #4a4e69;
-    --accent: #ff6584;
-    --text: #333;
-    --bg: #f8f9fa;
-    --card-bg: #fff;
-    --nav-bg: rgba(255, 255, 255, 0.95);
+    --primary: #7c4dff;
+    --secondary: #5e35b1;
+    --accent: #ff4081;
+    --text: #333344;
+    --text-secondary: #555566;
+    --bg: #f8f9ff;
+    --card-bg: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.98);
     --footer-bg: #2c3e50;
-    --section-bg: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    --section-bg: linear-gradient(135deg, #f5f7ff 0%, #e8eaf6 100%);
+    --glow: 0 0 10px rgba(124, 77, 255, 0.2);
+}
+
+/* Typography */
+body {
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
 
 /* Dark Sections */
 .dark-section {
     background: var(--section-bg);
     color: var(--text);
-    border-top: 1px solid rgba(156, 77, 255, 0.1);
-    border-bottom: 1px solid rgba(156, 77, 255, 0.1);
+    border-top: 1px solid rgba(179, 136, 255, 0.15);
+    border-bottom: 1px solid rgba(179, 136, 255, 0.15);
 }
 
-.dark-section h2,
-.dark-section h3 {
-    color: var(--primary);
-    text-shadow: 0 0 10px rgba(156, 77, 255, 0.3);
+.dark-section p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.dark-section .contact-info,
-.dark-section .contact-form,
-.dark-section .skill-category,
-.dark-section .project-card {
-    background: rgba(30, 30, 46, 0.7);
-    border: 1px solid rgba(156, 77, 255, 0.2);
-    backdrop-filter: blur(10px);
-}
-
-.dark-section .form-group input,
-.dark-section .form-group textarea {
-    background: rgba(40, 40, 60, 0.7);
-    color: var(--text);
-    border: 1px solid rgba(156, 77, 255, 0.3);
-}
-
-.dark-section .project-tech span {
-    background: rgba(156, 77, 255, 0.15);
-}
-
-/* Hero Section (unchanged background) */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/bg-1.PNG') !important;
-    background-size: cover !important;
-    background-position: center !important;
-}
-
-/* Navigation */
-nav {
-    background: var(--nav-bg);
-    border-bottom: 1px solid rgba(156, 77, 255, 0.2);
-}
-
-nav a {
-    color: var(--text);
+/* Cards & Containers */
+.skill-category,
+.project-card,
+.contact-info,
+.contact-form {
+    background: var(--card-bg);
+    border: 1px solid rgba(179, 136, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: var(--glow);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Project Cards */
 .project-card {
-    transition: all 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
-.project-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(156, 77, 255, 0.2);
-    border-color: var(--primary);
-}
-
-/* Skills Bars */
-.skill-bar {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.skill-progress {
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    box-shadow: 0 0 10px rgba(156, 77, 255, 0.5);
-}
-
-/* Contact Section */
-.contact-intro {
-    color: #bbb;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
-}
-
-/* Buttons */
-.cta-button {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    border: none;
-}
-
-.hire-me-button {
-    background: linear-gradient(135deg, var(--accent), #ff4d8d);
-}
-
-/* Dark Mode Toggle */
-#dark-mode-toggle {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    box-shadow: 0 0 15px rgba(156, 77, 255, 0.5);
-}
-
-/* Footer */
-footer {
-    background: var(--footer-bg);
-    border-top: 1px solid rgba(156, 77, 255, 0.2);
-}
-
-/* Add these new styles for better contrast */
 .project-card h3 {
-    color: var(--primary);
-    font-weight: 600;
+    color: var(--text);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .project-card p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-secondary);
+    font-size: 1rem;
 }
 
+.project-tech span {
+    background: rgba(179, 136, 255, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(179, 136, 255, 0.3);
+}
+
+/* Skills Section */
 .skill-category h3 {
-    color: var(--accent);
+    color: var(--text);
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
     position: relative;
+    padding-bottom: 0.5rem;
 }
 
 .skill-category h3::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: 0;
     left: 0;
-    width: 40px;
+    width: 50px;
     height: 3px;
-    background: var(--primary);
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.skill-bar {
+    background: rgba(255, 255, 255, 0.08);
+    height: 10px;
+    border-radius: 5px;
+}
+
+.skill-progress {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact-intro {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.contact-info p {
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+.contact-info i {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+/* Form Elements */
+.form-group input,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    border: 1px solid rgba(179, 136, 255, 0.3);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(179, 136, 255, 0.2);
+}
+
+/* Buttons */
+.cta-button {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(179, 136, 255, 0.3);
+}
+
+/* Navigation */
+nav a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+nav a::after {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+/* Hero Section (unchanged but with better text contrast) */
+.hero h1 {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: var(--glow);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    .dark-section p {
+        font-size: 1rem;
+    }
 }
