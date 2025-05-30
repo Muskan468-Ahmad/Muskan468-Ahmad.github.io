@@ -1,3 +1,6 @@
+// Only change needed is to remove the achievements observer since we removed that section
+// The rest of your JavaScript remains exactly the same
+
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
