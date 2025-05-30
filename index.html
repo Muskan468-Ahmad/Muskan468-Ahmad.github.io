@@ -3,44 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Muskan Ahmad | Data Scientist & Flutter Developer</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Navigation -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home">
-        <h1>Hi, I'm [Your Name]</h1>
-        <p>Web Developer | Designer</p>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I build websites...</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Work</h2>
-        <div class="project-grid">
-            <!-- Project cards go here -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="images/profile.jpg" alt="Muskan Ahmad" class="profile-pic">
+            <h1>Muskan Ahmad</h1>
+            <p class="subtitle">Data Scientist | Flutter Developer | AI Enthusiast</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/muskan-ahmad-8a36aa270" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Muskan468-Ahmad" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:muskanahmad2266@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Get in Touch</h2>
-        <a href="mailto:you@example.com">Email Me</a>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                As a data science enthusiast with a passion for drawing on data for social and technological revolution. 
+                My studies have helped me learn how to create and improve AI algorithms, work with complex data, 
+                and build modern web applications.
+            </p>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Python, R, SQL</li>
+                    <li>Machine Learning (RNN/LSTM)</li>
+                    <li>Flutter Development</li>
+                    <li>Power BI, Azure</li>
+                    <li>JavaScript, HTML/CSS</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Spam Detection</h3>
+                <p>Developed a text classification model using bidirectional RNNs (GRU/LSTM).</p>
+                <span class="tech">Python</span>
+                <a href="#" class="project-link">View Details</a>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Task Scheduling for Cloud Computing</h3>
+                <p>Developed a task scheduling algorithm using M/M/n queuing model.</p>
+                <span class="tech">Research</span>
+                <a href="#" class="project-link">View Details</a>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card">
